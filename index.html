@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1A1A2E">
+    <title>KMGC Studios - Generador de Licencias</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- PANTALLA DE LOGIN -->
+        <div id="loginScreen" class="screen active">
+            <div class="logo">
+                <h1>🔑</h1>
+                <h2>KMGC Studios</h2>
+                <p class="subtitle">Generador de Licencias</p>
+            </div>
+
+            <div class="card">
+                <label for="password">Contraseña de administrador</label>
+                <input type="password" id="password" placeholder="Ingresá la contraseña" autocomplete="off">
+                <button id="loginBtn" class="btn-primary">🔓 Entrar</button>
+                <div id="loginMessage" class="message"></div>
+            </div>
+
+            <p class="footer">by KMGC Studios — 2026</p>
+        </div>
+
+        <!-- PANTALLA PRINCIPAL -->
+        <div id="mainScreen" class="screen">
+            <header>
+                <h1>🔧 Generador de Licencias</h1>
+                <button id="logoutBtn" class="btn-logout">Cerrar sesión</button>
+            </header>
+
+            <div class="card">
+                <h3>🖥️ HWID del cliente</h3>
+                <p class="help">Pegá el HWID que te envió el cliente</p>
+                <input type="text" id="hwidInput" placeholder="XXXX-XXXX-XXXX-XXXX"
+                       maxlength="19" autocomplete="off" spellcheck="false">
+                <button id="generateBtn" class="btn-primary">🎫 Generar clave</button>
+                <div id="generateMessage" class="message"></div>
+            </div>
+
+            <div class="card" id="resultCard" style="display:none;">
+                <h3>✅ Clave generada</h3>
+                <div class="key-display" id="keyDisplay"></div>
+                <div class="button-row">
+                    <button id="copyKeyBtn" class="btn-secondary">📋 Copiar clave</button>
+                    <button id="copyMessageBtn" class="btn-secondary">📋 Copiar mensaje</button>
+                </div>
+                <button id="whatsappBtn" class="btn-whatsapp">💬 Enviar por WhatsApp</button>
+            </div>
+
+            <div class="card">
+                <h3>💬 Mensaje para el cliente</h3>
+                <textarea id="messageText" readonly rows="12"></textarea>
+            </div>
+
+            <p class="footer">by KMGC Studios — 2026</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

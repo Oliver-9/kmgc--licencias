@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #1A1A2E;
+    --bg-panel: #141424;
+    --bg-card: #232338;
+    --bg-input: #282840;
+    --text: #FFFFFF;
+    --text-soft: #D2D2E6;
+    --text-muted: #8080A0;
+    --accent: #FFCC33;
+    --accent-dark: #E6B800;
+    --border: #505078;
+    --success: #3CC85A;
+    --error: #DC5050;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    color: var(--accent);
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    color: var(--accent);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.help {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text);
+    font-size: 15px;
+    font-family: 'Consolas', monospace;
+    margin-bottom: 12px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+label {
+    display: block;
+    color: var(--text-soft);
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 200px;
+    font-size: 13px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn-secondary {
+    background: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: var(--border);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    margin-top: 8px;
+}
+
+.btn-whatsapp:hover {
+    background: #1DA851;
+}
+
+.btn-logout {
+    width: auto;
+    padding: 6px 12px;
+    background: var(--bg-input);
+    color: var(--text-soft);
+    font-size: 12px;
+    border: 1px solid var(--border);
+}
+
+.btn-logout:hover {
+    background: var(--border);
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+.key-display {
+    background: var(--bg-input);
+    border: 1px solid var(--success);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-family: 'Consolas', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--success);
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.message {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 20px;
+}
+
+.message.success { color: var(--success); }
+.message.error { color: var(--error); }
+.message.warning { color: var(--accent); }
+
+.footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+    .logo h1 { font-size: 44px; }
+    .logo h2 { font-size: 22px; }
+    header h1 { font-size: 16px; }
+    .key-display { font-size: 14px; padding: 12px; }
+}
